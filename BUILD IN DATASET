@@ -1,0 +1,47 @@
+from sklearn import datasets 
+import pandas as pd 
+iris datasets.load_iris() 
+print(iris) 
+# Prints the type/type object of iris 
+print("\ntype:\n",type(iris)) 
+# prints the dictionary keys of iris data 
+print("\nkeys:\n",iris.keys()) 
+# prints the type/type object of given attributes 
+print("\ntype of data and target:\n",type(iris.data), type(iris.target)) 
+# prints the no of rows and columns in the dataset 
+print("\ndata shape:\n",iris.data.shape)
+[7:28 pm, 29/5/2024] Janani REC: # prints the target set of the data 
+print("\ntarget names:\n", iris.target_names) 
+# Load iris training dataset 
+X = iris.data 
+# Load iris target set 
+Y = iris.target 
+#print("\ntarget:\n",Y) 
+# Convert datasets' type into dataframe 
+df = pd.DataFrame(X, columns=iris.feature_names) 
+# Print the first five tuples of dataframe.
+[7:29 pm, 29/5/2024] Janani REC: print("\nIris dataframe:\n", df.head()) 
+print("-------\n")
+
+diabetes datasets.load_diabetes() 
+print("\ndiabetes dataset:\n", diabetes); 
+X = diabetes.data 
+# Load iris target set 
+Y = diabetes.target
+[7:30 pm, 29/5/2024] Janani REC: #print("\ntarget:\n",Y) 
+ 
+# Convert datasets' type into dataframe
+df = pd.DataFrame(X, columns-diabetes.feature_names) 
+# Print the first five tuples of dataframe. 
+print("\nDiabetes dataframe:\n",df.head()) 
+print("---------\n") 
+data = datasets.load_breast_cancer() 
+label_names = data['target_names'] 
+labels = data['target'] 
+feature_names = data['feature_names']
+[7:31 pm, 29/5/2024] Janani REC: features= data['data'] 
+print("Breast Cancer data:\n", data); 
+print("\nLabel names:\n", label_names)
+[7:31 pm, 29/5/2024] Janani REC: print("\nLabels:\n", labels) 
+print("\nFeature names:\n", feature_names) 
+print("\nFeatures:\n", features)
