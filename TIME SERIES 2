@@ -1,0 +1,60 @@
+import datetime
+cd=datetime.datetime.now()
+print(cd)
+#Two-digit year
+res=cd.strftime("%y")
+print("\nTwo-digit year:",res)
+#Four-digit year
+res1=cd.strftime("%Y")
+print("\nFour-digit year:",res1)
+#Two-digit month [01, 12]
+res=cd.strftime("%m")
+print("\nTwo-digit month [01, 12]:",res)
+# Short version of month
+res=cd.strftime("%b")
+print("\nShort version of month:",res)
+# Full name of month
+res=cd.strftime("%B")
+print("\nFull name of month:", res)
+#Days of the year
+res=cd.strftime("%j")
+print("\nDays of the year:", res)
+# Shortcut for %m/%d/%y (e.g., 04/18/12)
+res=cd.strftime("%D")
+print("\nShortcut for %m/%d/%y (e.g., 04/18/12):",res)
+# Two-digit day [01, 31]
+res=cd.strftime("%d")
+print("\nTwo-digit day [01, 31]:",res)
+# Short version of day
+res=cd.strftime("%a")
+print("\nShort version of day:",res)
+# Full name of a day
+res=cd.strftime("%A")
+print("\nFull name of a day:",res)
+#Hour (24-hour clock) [00, 23]
+res=cd.strftime("%H")
+print("\nHour (24-hour clock) [00, 23]:",res)
+# Hour (12-hour clock) [01, 12]
+res=cd.strftime("%l")
+print("\nHour (12-hour clock) [01, 12]:",res)
+# Two-digit minute [00, 59]
+res=cd.strftime("%M")
+print("\nTwo-digit minute [00, 59]:", res)
+# Second [00, 61] (seconds 60, 61 account for leap seconds)
+res=cd.strftime("%S")
+print("\nSecond [00, 61] (seconds 60, 61 account for leap seconds):",res)
+# Shortcut for %Y-%m-%d (e.g., 2012-4-18)
+res=cd.strftime("%F")
+print("\nShortcut for %Y-%m-%d (e.g., 2012-4-18):",res)
+# Microsecond as an integer, zero-padded (from 000000 to 999999)
+res=cd.strftime("%f")
+print("\nMicrosecond as an integer, zero-padded (from 000000 to 999999):",res)
+# Locale equivalent of AM or PM
+res=cd.strftime("%p")
+print("\nLocale equivalent of AM or PM:",res)
+# Locale-appropriate formatted date (e.g., in the United States, May 1, 2012 yields '05/01/2012')
+res=cd.strftime("%x")
+print("\nLocale-appropriate formatted date (e.g., in the United States, May 1, 2012 yields '05/01/2012'):",res)
+# Locale-appropriate time (e.g., '04:24:12 PM')
+res=cd.strftime("%X")
+print("\nLocale-appropriate time (e.g., '04:24:12 PM'):",res)
