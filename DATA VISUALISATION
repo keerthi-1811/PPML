@@ -1,0 +1,38 @@
+import matplotlib.pyplot as ply
+import numpy as np
+
+xpoints = np.array([0, 6])
+
+ypoints = np.array([0, 250])
+
+print(plt.plot(xpoints, ypoints))
+
+print(plt.show())
+
+#Points without line
+
+x = np.array([0, 5])
+
+y = np.array([0, 25])
+
+print(plt.plot(x, y, marker='p'))
+
+print(plt.show())
+
+#Multiple points
+
+xpoints = np.array([1, 2, 6, 8])
+
+ypoints = np.array([3, 8, 1, 10])
+
+print(plt.plot(xpoints, ypoints))
+
+print(plt.show())
+
+#Default X points
+
+ypoints = np.array([3, 8, 1, 10, 5, 7])
+
+print(plt.plot(ypoints))
+
+print(plt.show())
