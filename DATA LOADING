@@ -1,0 +1,23 @@
+ import pandas as pd 
+d=pd.read_excel ("D:\sample.xlsx") 
+#Get the table data 
+print("Get the table data:\n") 
+print(d) 
+#print(d.to_string()) 
+df pd.DataFrame(d) 
+#print(df) 
+#Get the column heading 
+print("\nGet the column heading\n",df.columns) 
+#Get the shape- (no.of rows,no,of columns) 
+print("\nGet the shape-(no.of rows,no.of columns)\n",df.shape) 
+#Get particular column values 
+print("\nGet particular column values\n",df['ROLL NO']) 
+#Extract/slice the table values- [including this row, excluding this row] 
+print("\nExtract/slice the table values-[including this row, excluding this row]\n",df[2:5]) 
+#Get the particular row values-through row number identification 
+print("\nGet the particular row values-through row number identification\n",df.loc[7]) 
+#Get the particular row values- through 'Roll number' identification 
+print("\nGet the particular row values-through 'Roll number' identification\n",d.loc[d['ROLL NO']==105]) 
+#Make an average of total marks 
+df=d['TOTAL']/5 
+print("\nMake an average of total marks:\n",df)
