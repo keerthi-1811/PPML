@@ -1,0 +1,34 @@
+#import the pandas library 
+import pandas as pd 
+import numpy as np 
+#creating DataFrame 
+df=pd.DataFrame(np.random.randn(5,3),index=['a','c','e','f','h'],columns=['one','two','three']) df=df.reindex(['a','b','c','d','e','f','g','h']) 
+print("Original DataFrame with NaN\n",df) 
+#Drop NaN rows 
+print("Dropped Data Frame\n",df.dropna()) 
+print("\n") 
+df=pd.DataFrame(np.random.randn(3,3),index=['a','c','e'],columns=['one','two','three']) df=df.reindex(['a','b','c']) 
+print("original DataFrame:\n",df) 
+print("\n") 
+#replacing NaN rows with zeros 
+print("NaN replaced with '0':\n") 
+print(df.fillna(0))
+#Creating DataFrame 
+df=pd.DataFrame({'one':[10,20,30,40,50,2000],'two':[1000,0,30,40,50,60]}) print("\n Original DataFrame:\n",df)
+#Replacing some values 
+print("\n DataFrame with replaced values:\n") 
+print(df.replace({1000:10,2000:60,40:400,0:100})) 
+#Creating new DataFrame 
+df=pd.DataFrame(np.random.randn(5,3),index=['a','c','e','f','h'],columns=['one','two','three']) df=df.reindex(['a','b','c','d','e','f','g','h']) 
+print("Original DataFrame:\n",df) 
+#Identifying the NaN rows as Boolean result through isnull() function
+51 
+print("\n NaN-with True fill:\n") 
+print(df['one'].isnull()) 
+#Creating new DataFrame 
+df=pd.DataFrame(np.random.randn(5,3),index=['a','c','e','f','h'],columns=['one','two','three']) df=df.reindex(['a','b','c','d','e','f','g','h']) 
+print("\n Original DataFrame:\n",df) #Replacing NaN rows with forward values 
+print("\n NaN-Filled with Forward values:\n") 
+print(df.fillna(method='pad')) 
+#Replacing NaN rows with Backward values 
+print("NaN-Filled with Background values:\n") print(df.fillna(method='bfill'))
