@@ -1,0 +1,45 @@
+ import pandas as pd
+
+df = pd.DataFrame([[11, 21, 31], [1, 22, 32], [315, 32, 33]], index=['one', 'two', 'three'], columns=['a', 'b', 'c'])
+
+print(df)
+
+#Taking the input from Dataframe and storing in the Excel file
+
+print("Taking the input from Dataframe and storing in the Excel file")
+
+df.to_excel('d:\pandas_to_excel.xlsx', sheet_name='new_sheet_name')
+
+#Second Dataframe input to another Excel file
+
+d = pd.DataFrame([[110, 210, 310], [12, 220, 320], [310, 320, 330]], index=['four', 'five', 'six'], columns=['a', 'b', 'c'])
+
+d.to_excel('d:\pandas_to_excel1.xlsx', sheet_name='new_sheet_name')
+
+#Merging two Excel files input into third file
+
+x=pd.read_excel('d:\pandas_to_excel.xlsx')
+
+y=pd.read_excel('d:\pandas_to_excel1.xlsx')
+
+z=x.append(y)
+
+#z=pd.cancat([x,y])
+
+z.to_excel('d:\pandas_to_excel3.xlsx')
+
+#Sorting the column vaules
+
+df=z.sort_values(["a"])
+
+print(df)
+
+df.to_excel('d:\pandas_to_excel4.xlsx')
+
+df=pd.read_csv("D:\sam_csv.csv")
+
+print(df)
+
+print(list(df))
+
+print(format(len(df)))
