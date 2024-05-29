@@ -1,0 +1,30 @@
+import pandas as pd 
+import numpy as np 
+df = pd.DataFrame({'A': ['foo', 'foo', 'bar', 'foo', 'bar', 'foo'], 
+'B': ['one', 'two', 'three','two', 'two', 'one'], 
+'C': np.random.randint(5, size=6), 
+'D': np.random.randint(5, size=6), 
+'E': np.random.randint(5, size=6)}) 
+print("\nOriginal DataFrame\n",df) 
+#Group by (multi-column): with one column sum 
+df1 = df.groupby(['A', 'B'], as_index=False)['C'].sum() 
+print("\nOriginal DataFrame\n",df) 
+print("\nGroup by (multi-column): with one column sum\n",df1) 
+#Group by (multi-column): with multi columns sum 
+df2 = df.groupby(['A', 'B'], as_index=False).sum() 
+print("\nOriginal DataFrame\n",df) 
+print("\nGroup by (multi-column): with multi columns sum\n",df2) 
+#Combined Groupby and Aggregate function 
+df3= df.groupby(['A', 'B'], as_index=False)['C'].agg('sum') 
+print("\nOriginal DataFrame\n",df) 
+print("\nCombined Groupby and Aggregate function\n",df3) 
+#Combined Groupby and Aggregate function- separate column headings 
+df4= (df.groupby(['A', 'B']) 
+agg([('average', 'mean'), ('total', 'sum')])) 
+print("\nOriginal DataFrame\n",df) 
+print("\nCombined Groupby and Aggregate function- separate column headings\n",df4) 
+df5= df.groupby(['A', 'B'], as_index=False).sum() 
+df6=(df.groupby(['A', 'B']).agg(['sum'])) 
+print("\nOriginal DataFrame\n",df) 
+print("\nGroupby - sum function\n",df5) 
+print("\nGroupby and Aggregate - sum function\n",df6
