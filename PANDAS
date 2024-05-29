@@ -1,0 +1,66 @@
+ import pandas as pd
+
+import numpy as np
+
+#Creating Series from Array
+
+arr = np.array(['P','a','n','d','a','s'])
+
+a = pd.Series(arr)
+
+print("Series from array:")
+
+print(a)
+
+#Series from dictionary
+
+arr = {'x': 0., 'y': 1., 'z': 2.}
+
+b = pd.Series(arr)
+
+print("\n\nSeries from dictionary:\n")
+
+print (b)
+
+#Series using scalar
+
+x = pd.Series(4, index=[0, 1, 2, 3])
+
+print("\nSeries using scalar\n")
+
+print (x)
+
+#Series through index
+
+x = pd.Series([1,2,3], index = ['a','b','c'])
+
+print("\nSeries through index:")
+
+print (x)
+
+a=pd.Series(data=[1,2,3,4])
+
+print("\n a series:\n",a)
+
+print("\nIndex: \n",a.index)
+
+print("\nValues: \n",a.values)
+
+print("\nShape: ",a.shape)
+
+print("\nDimension: ",a.ndim)
+
+print("\nSize: ",a.size)
+
+
+
+
+
+
+
+
+ypoints = np.array([3, 8, 1, 10, 5, 7])
+
+print(plt.plot(ypoints))
+
+print(plt.show())
