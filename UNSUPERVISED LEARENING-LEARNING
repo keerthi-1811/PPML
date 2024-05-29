@@ -1,0 +1,14 @@
+# Importing Modules 
+from sklearn import datasets 
+import matplotlib.pyplot as plt 
+#Loading dataset 
+iris_df = datasets.load_iris() 
+# Available methods on dataset 
+print("Methods:\n",dir(iris_df)) 
+# Features 
+print("\nFeatures:\n",iris_df.feature_names) 
+# Targets 
+print("\nTargets:\n", iris_df.target) 
+#Target Names 
+print("\nTarget names:\n",iris_df.target_names) 
+label = {0: 'red', 1: 'blue', 2: 'green'}
