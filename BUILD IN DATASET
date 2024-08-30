@@ -5,7 +5,6 @@ print(iris)
 # Prints the type/type object of iris 
 print("\ntype:\n",type(iris)) 
 # prints the dictionary keys of iris data 
-print("\nkeys:\n",iris.keys()) 
 # prints the type/type object of given attributes 
 print("\ntype of data and target:\n",type(iris.data), type(iris.target)) 
 # prints the no of rows and columns in the dataset 
